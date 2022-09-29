@@ -14,7 +14,7 @@ export const Router: React.FC = () => {
   return (
     <NavigationContainer>
       <MainStack.Navigator>
-        {hasToken ? (
+        {!hasToken ? (
           <>
             <MainStack.Screen
               name={RootP.app}

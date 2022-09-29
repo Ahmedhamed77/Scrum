@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/shared/assets/fonts/Circe-Bold.ttf",
+      "sha1": "5d742a512fff9855aaa098166fada07dc8e056e2"
+    },
+    {
+      "path": "src/shared/assets/fonts/Circe-Regular.ttf",
+      "sha1": "83b9cfaf5915351ba7ea76ee466e2e9f8d615916"
+    }
+  ]
+}

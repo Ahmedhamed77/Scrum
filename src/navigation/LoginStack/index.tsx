@@ -12,7 +12,7 @@ export const LoginStack = () => {
       <Stack.Screen
         name={LoginP.pickRole}
         component={PickRoleScreen}
-        options={{headerTitle: () => null}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name={LoginP.login}
