@@ -3,12 +3,18 @@ import React from 'react';
 import {styles} from './style';
 import {SafeAreaView, ScrollView, View} from 'react-native';
 import {CustomButton, CustomText} from '../../../shared';
+import {
+  LoginNavigationProp,
+  LoginP,
+} from '../../../navigation/LoginStack/interface';
 
-interface PickRoleScreenType {}
+interface PickRoleScreenType {
+  navigation: LoginNavigationProp<LoginP>;
+}
 
-export const PickRoleScreen: React.FC<PickRoleScreenType> = () => {
+export const PickRoleScreen: React.FC<PickRoleScreenType> = ({navigation}) => {
   const onGoToRegister = () => {
-    console.log('onGoToRegister');
+    navigation.navigate(LoginP.login);
   };
 
   return (
