@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 12,
   },
   inputContainer: {
-    marginVertical: 12,
+    marginBottom: 16,
   },
   loginButton: {
     height: 50,

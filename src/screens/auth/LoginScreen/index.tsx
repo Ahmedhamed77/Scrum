@@ -13,10 +13,16 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useToggle} from '../../../shared/hooks';
 import {ScrollView} from 'react-native-gesture-handler';
+import {
+  LoginNavigationProp,
+  LoginP,
+} from '../../../navigation/LoginStack/interface';
 
-interface LoginScreenProps {}
+interface LoginScreenProps {
+  navigation: LoginNavigationProp<LoginP>;
+}
 
-export const LoginScreen: React.FC<LoginScreenProps> = () => {
+export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const {
@@ -24,14 +30,16 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
     toggle: toggleHidePassword,
     setFalse,
   } = useToggle(true);
+
   const passwordIcon = isHidePassword ? 'eye-off' : 'eye';
 
+  //TODO: add the backend integeration
   const onUserLogin = () => {
     setFalse();
     setEmail('');
     setPassword('');
     console.log('idiot user in');
-    //TODO: add the backend integeration
+    navigation.navigate(LoginP.setName);
   };
 
   return (
@@ -42,23 +50,19 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
             Logo
           </CustomText>
           <CustomInput
-            placeholder="Email"
+            inputTag="Почта"
+            placeholder="Почта"
             value={email}
             onChangeText={setEmail}
-            inputContainerStyle={styles.inputContainer}
-            LeftIcon={() => (
-              <Icon name="mail" size={20} color={COLORS.darkGray} />
-            )}
+            wrapperStyle={styles.inputContainer}
           />
           <CustomInput
-            placeholder="Password"
+            inputTag="Пароль"
+            placeholder="Пароль"
             value={password}
             secureTextEntry={isHidePassword}
             onChangeText={setPassword}
-            inputContainerStyle={styles.inputContainer}
-            LeftIcon={() => (
-              <Icon name="lock-closed" size={20} color={COLORS.darkGray} />
-            )}
+            wrapperStyle={styles.inputContainer}
             RightIcon={() => (
               <Icon
                 size={20}

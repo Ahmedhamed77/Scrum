@@ -7,6 +7,10 @@ export enum LoginP {
   signUp = 'SignUp',
   resetPassword = 'ResetPassword',
   pickRole = 'PickRole',
+  setName = 'SetName',
+  setDOB = 'SetDOB',
+  setPhone = 'SetPhone',
+  setAvatar = 'SetAvatar',
 }
 
 export type LoginStackParamList = {
@@ -14,6 +18,10 @@ export type LoginStackParamList = {
   [LoginP.signUp]: undefined;
   [LoginP.resetPassword]: undefined;
   [LoginP.pickRole]: undefined;
+  [LoginP.setName]: undefined;
+  [LoginP.setDOB]: undefined;
+  [LoginP.setPhone]: undefined;
+  [LoginP.setAvatar]: undefined;
 };
 
 export type LoginNavigationProp<P extends LoginP> = CompositeNavigationProp<

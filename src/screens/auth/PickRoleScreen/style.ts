@@ -5,6 +5,9 @@ export const styles = StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
   },
+  stepperStyle: {
+    marginVertical: 20,
+  },
   scrollContainer: {
     flexGrow: 1,
     paddingHorizontal: 16,
